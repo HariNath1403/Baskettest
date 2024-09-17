@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Themed Form</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f8f5; /* light greenish background */
+        color: #2e4d36; /* dark green for text */
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        opacity: 0.1;
+        z-index: 0; /* Set z-index to 0 */
+      }
+
+      h1 {
+        text-align: center;
+        color: #3c6e47; /* deep green for heading */
+        margin-bottom: 20px;
+        font-family: "Georgia", serif;
+      }
+
+      form {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 475px;
+        width: 100%;
+        position: relative; /* Ensure form is positioned above the background */
+        z-index: 1; /* Set z-index to 1 */
+      }
+
+      .row {
+        margin-bottom: 15px;
+      }
+
+      label {
+        text-transform: uppercase;
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #2e4d36;
+      }
+
+      input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        /* width: 90%; */
+        padding: 10px;
+        background-color: #3c6e47; /* button in deep green */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .btn:hover {
+        background-color: #2e4d36; /* darker shade on hover */
+      }
+
+      /* Add some nature-inspired textures */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        opacity: 0.1;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/" method="'post" id="baskets">
+      <div class="row">
+        <label for="username">Username</label>
+        <input type="text" name="username" />
+      </div>
+      <div class="row">
+        <label for="sn">Serial Number </label>
+        <input type="text" name="sn" />
+      </div>
+      <div class="row">
+        <label for="from">FROM</label>
+        <input type="text" name="from" />
+      </div>
+      <div class="row">
+        <label for="to">TO</label>
+        <input type="text" name="to" />
+      </div>
+      <button class="btn">Track</button>
+    </form>
+  </body>
+</html>
